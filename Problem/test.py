@@ -1,6 +1,16 @@
-def test(x, y):
-    print(x + y)
+arr = [3, 6, 7, 1, 5, 4]
+n = len(arr)
 
-res = test(5, 13)
+for i in range(1<<n):
+    cnt = 0
+    part = list()
+    for j in range(n):
+        # print(bin(i), bin(1<<j),j)
+        if i&(1<<j):
+            part.append(arr[j])
+            cnt += 1
 
-print(res)
+    if cnt == 3:
+        print(part)
+
+    part = []
