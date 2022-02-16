@@ -1,10 +1,10 @@
 N, K = map(int, input().split())
 temps = list(map(int, input().split()))
-ans = -1000000
+arr = []
+for i in range(1, N):
+    arr.append(temps[i] + arr[-1])
+ans = arr[K-1] - arr[0]
 for i in range(N-K+1):
-    sum_total = 0
-    for j in range(i, i+K):
-        sum_total += temps[j]
-    if ans < sum_total:
-        ans = sum_total
+    if ans < arr[i + K - 1] - arr[i]:
+        ans = arr[i + K - 1] - arr[i]
 print(ans)

@@ -1,6 +1,5 @@
 def rec(arr):
-    x1, y1, p1, q1, x2, y2, p2, q2 = arr[0:8]
-
+    x1, x2, y1, y2 = 0, 0, 0, 0
 
 
 for tc in range(4):
