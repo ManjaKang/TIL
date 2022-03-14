@@ -1,10 +1,14 @@
 N, K = map(int, input().split())
-temps = list(map(int, input().split()))
-arr = []
-for i in range(1, N):
-    arr.append(temps[i] + arr[-1])
-ans = arr[K-1] - arr[0]
+temp_list = list(map(int, input().split()))
+sum_list = [0]
+temp_sum = 0
+for a in temp_list:
+    temp_sum += a
+    sum_list.append(temp_s)
+
+max_sum = sum_list[K] = sum_list[0]
 for i in range(N-K+1):
-    if ans < arr[i + K - 1] - arr[i]:
-        ans = arr[i + K - 1] - arr[i]
-print(ans)
+    temp = sum_list[i+K] - sum_list[i]
+    if max_sum < temp:
+        max_sum = temp
+print(max_sum)
