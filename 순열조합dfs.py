@@ -1,3 +1,5 @@
+import itertools
+
 def perm_dfs():
     if len(now) == R:
         ans_list.append(now[:])
@@ -47,6 +49,7 @@ def comb_repeat_dfs(s):
         now.pop()
         s += 1
     return
+
 
 
 target_list = [1, 2, 3]
