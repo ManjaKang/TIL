@@ -1,5 +1,6 @@
 import itertools
 
+
 def perm_dfs():
     if len(now) == R:
         ans_list.append(now[:])
@@ -32,7 +33,7 @@ def perm_repeat_dfs():
     if len(now) == R:
         ans_list.append(now[:])
         return
-    for i in range(N):&
+    for i in range(N):
         now.append(target_list[i])
         perm_dfs()
         now.pop()
