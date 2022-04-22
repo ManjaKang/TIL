@@ -1,4 +1,6 @@
-from collections import defaultdict
+arr = [[0]*10 for _ in range(10)]
 
-test = defaultdict(list)
-print(test[1])
+for ar in arr:
+    for a in ar:
+        a += 1
+print(arr)
