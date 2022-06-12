@@ -2,18 +2,18 @@ def dfs(s, n):
     i, j = stack[s]
     x1 = i + j
     x2 = i - j + N - 1
-    # 가지치기
-    if 1 in (visited_r[x1], visited_l[x2]):
-        return
-    else:
-        visited_r[x1] = 1
-        visited_l[x2] = 1
-        global ans
-        if ans < n:
-            ans = n
+    visited_r[x1] = 1
+    visited_l[x2] = 1
+    global ans
+    if ans < n:
+        ans = n
 
     for a in range(s+1, len(stack)):
-        dfs(a, n+1)
+        i, j = stack[a]
+        x1 = i + j
+        x2 = i - j + N - 1
+        if visited_r[x1] == 0 and visited_l[x2] == 0:
+            dfs(a, n+1)
 
 
 N = int(input())
